@@ -42,7 +42,7 @@ export  class FormInput{
             let docData:HasHtmlFormat;
             let date=new Date();
             docData=new Datas(type,firstName,lastName,adress,country,town,zip,product,price,quantity,tva,date);
-            console.log(docData);
+            console.log(docData.HasHtmlFormat());
         }
 
     }
