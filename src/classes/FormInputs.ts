@@ -18,6 +18,7 @@ export  class FormInput{
     tva : HTMLInputElement;
     docContainer: HTMLDivElement;
     hiddenDiv: HTMLDivElement;
+    buttonPrint:HTMLButtonElement;
     constructor() {
         this.form = document.getElementById("form") as HTMLFormElement;
         this.type = document.getElementById("type") as HTMLSelectElement;
@@ -33,6 +34,7 @@ export  class FormInput{
         this.tva = document.getElementById("tva") as HTMLInputElement;
        this.docContainer= document.getElementById('document-container') as HTMLDivElement;
        this.hiddenDiv= document.getElementById('hiddenDiv') as HTMLDivElement;
+       this.buttonPrint= document.getElementById('print') as HTMLButtonElement;
         this.submitFormListener();
     }
 
@@ -51,7 +53,7 @@ export  class FormInput{
             console.log(docData.HasHtmlFormat());
 
             let template:HasRender;
-            template=new Display(this.docContainer,this.hiddenDiv);
+            template=new Display(this.docContainer,this.hiddenDiv,this.buttonPrint);
             template.render(docData,type)
 
 

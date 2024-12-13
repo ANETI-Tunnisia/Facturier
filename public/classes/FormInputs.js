@@ -16,6 +16,7 @@ export class FormInput {
         this.tva = document.getElementById("tva");
         this.docContainer = document.getElementById('document-container');
         this.hiddenDiv = document.getElementById('hiddenDiv');
+        this.buttonPrint = document.getElementById('print');
         this.submitFormListener();
     }
     submitFormListener() {
@@ -32,7 +33,7 @@ export class FormInput {
             docData = new Datas(type, firstName, lastName, adress, country, town, zip, product, price, quantity, tva, date);
             console.log(docData.HasHtmlFormat());
             let template;
-            template = new Display(this.docContainer, this.hiddenDiv);
+            template = new Display(this.docContainer, this.hiddenDiv, this.buttonPrint);
             template.render(docData, type);
         }
     }
