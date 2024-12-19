@@ -4,7 +4,7 @@ import { Storage } from "./classes/Storage.js";
 new FormInput();
 Storage.checkStorage();
 
-/*form.addEventListener("submit", (e: Event) => {
+/*this.form.addEventListener("submit", (e: Event) => {
   e.preventDefault();
   console.log(type.value);
   
