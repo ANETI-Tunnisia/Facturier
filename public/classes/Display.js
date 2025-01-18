@@ -1,3 +1,4 @@
+import { Storage } from "./Storage.js";
 export class Display {
     constructor(container, hiddenDiv, buttonPrint) {
         this.container = container;
@@ -8,6 +9,7 @@ export class Display {
     render(docObj, docType) {
         const htmlstring = docObj.HasHtmlFormat();
         this.container.innerHTML = htmlstring;
+        new Storage(docType, htmlstring);
         if (docType === 'invoice') {
             this.buttonPrint.innerText = 'Print Invoice';
         }
