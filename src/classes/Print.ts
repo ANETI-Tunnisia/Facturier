@@ -1,5 +1,5 @@
 
-import {HasPrint} from "../interfaces/HasPrint.js";
+import {HasPrint} from "../interfaces/HasPrint";
 export class Print implements HasPrint
 {
     constructor(private el:HTMLDivElement    ) {
